@@ -1,0 +1,8 @@
+{
+    "extends": "@cookielab.io/server",
+    "rules": {
+        "complexity": [0],
+        "lines-around-comment": [0],
+        "no-underscore-dangle": [0]
+    }
+}

@@ -1,0 +1,26 @@
+{
+  "coverage": "93.33%",
+  "expectCount": 30,
+  "actualCount": 28,
+  "files": {
+    "client/Client.js": {
+      "expectCount": 6,
+      "actualCount": 5,
+      "undocumentLines": [
+        36
+      ]
+    },
+    "client/ControlApi.js": {
+      "expectCount": 11,
+      "actualCount": 10,
+      "undocumentLines": [
+        20
+      ]
+    },
+    "client/Test.js": {
+      "expectCount": 13,
+      "actualCount": 13,
+      "undocumentLines": []
+    }
+  }
+}

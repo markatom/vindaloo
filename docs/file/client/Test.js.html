@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <base data-ice="baseUrl" href="../../">
+  <title data-ice="title">client/Test.js | Vindaloo</title>
+  <link type="text/css" rel="stylesheet" href="css/style.css">
+  <link type="text/css" rel="stylesheet" href="css/prettify-tomorrow.css">
+  <script src="script/prettify/prettify.js"></script>
+  <script src="script/manual.js"></script>
+<meta name="description" content="Painless integragration testing."><meta property="twitter:card" content="summary"><meta property="twitter:title" content="Vindaloo"><meta property="twitter:description" content="Painless integragration testing."></head>
+<body class="layout-container" data-ice="rootContainer">
+
+<header>
+  <a href="./">Home</a>
+  
+  <a href="identifiers.html">Reference</a>
+  <a href="source.html">Source</a>
+  
+  <div class="search-box">
+  <span>
+    <img src="./image/search.png">
+    <span class="search-input-edge"></span><input class="search-input"><span class="search-input-edge"></span>
+  </span>
+    <ul class="search-result"></ul>
+  </div>
+<a style="position:relative; top:3px;" href="https://github.com/markatom/vindaloo"><img width="20px" src="./image/github.png"></a></header>
+
+<nav class="navigation" data-ice="nav"><div>
+  <ul>
+    
+  <li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/client/Client.js~Client.html">Client</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/client/Test.js~Test.html">Test</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/client/Test.js~TestError.html">TestError</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-typedef">T</span><span data-ice="name"><span><a href="typedef/index.html#static-typedef-Configuration">Configuration</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-typedef">T</span><span data-ice="name"><span><a href="typedef/index.html#static-typedef-Binding">Binding</a></span></span></li>
+</ul>
+</div>
+</nav>
+
+<div class="content" data-ice="content"><h1 data-ice="title">client/Test.js</h1>
+<pre class="source-code line-number raw-source-code"><code class="prettyprint linenums" data-ice="content">// @flow
+
+import ControlApi, {ApiError} from &apos;./ControlApi&apos;;
+import type {BindingType, SetupBinding} from &apos;./Client&apos;;
+
+/**
+ * Binding of current test.
+ * @typedef {Object} Binding
+ * @property {string} type - Type of used binding method.
+ * @property {{name: string, value: string}} header - Header name and value.
+ */
+export type Binding = {
+    type: &apos;header&apos;,
+    header: {
+        name: string,
+        value: string,
+    },
+} | {
+    type: &apos;port&apos;,
+    port: number,
+};
+
+/**
+ * Error representing failed test.
+ */
+class TestError extends Error {
+}
+
+/**
+ * Configured test using given scenario.
+ */
+class Test {
+    /** @ignore */
+    _controlApi: ControlApi;
+    /** @ignore */
+    _bindingType: BindingType;
+    /** @ignore */
+    _setupBinding: SetupBinding;
+    id: string;
+    scenario: string;
+    timeout: ?number;
+    binding: ?Binding;
+
+    /**
+     * @ignore
+     */
+    constructor(controlApi: ControlApi, bindingType: BindingType, setupBinding: SetupBinding, testId: string, scenario: string): void {
+        this._controlApi = controlApi;
+        this._bindingType = bindingType;
+        this._setupBinding = setupBinding;
+        this.id = testId;
+        this.scenario = scenario;
+    }
+
+    /**
+     * Invokes setup phase of test.
+     */
+    async setup(): Promise&lt;void&gt; {
+        try {
+            const response = await this._controlApi.setup(this.id, this.scenario);
+
+            // $FlowFixMe
+            this.binding = Object.assign({}, {type: this._bindingType}, response.test.binding);
+            this.timeout = response.test.timeout;
+
+            if (this.binding.type === &apos;port&apos;) {
+                this._setupBinding(this.binding.port);
+
+            } else {
+                this._setupBinding(this.binding.header.name, this.binding.header.value);
+            }
+
+        } catch (error) {
+            if (ApiError instanceof ApiError &amp;&amp; error.type === &apos;unsupported-api-version&apos;) {
+                throw new TestError(&apos;Unsupported API version.&apos;);
+            }
+
+            if (ApiError instanceof ApiError &amp;&amp; error.type === &apos;unsupported-binding-type&apos;) {
+                throw new TestError(&apos;Unsupported binding type.&apos;);
+            }
+
+            if (ApiError instanceof ApiError &amp;&amp; error.type === &apos;unknown-scenario&apos;) {
+                throw new TestError(`Unable to setup test by unknown scenario &quot;${this.scenario}&quot;.`);
+            }
+
+            if (ApiError instanceof ApiError &amp;&amp; error.type === &apos;duplicate-test&apos;) {
+                throw new TestError(`Unable to setup test with duplicate identifier &quot;${this.id}&quot;.`);
+            }
+
+            if (ApiError instanceof ApiError &amp;&amp; error.type === &apos;setup-failed&apos;) {
+                throw new TestError(`Setup of test &quot;${this.id}&quot; using scenario &quot;${this.scenario}&quot; failed with error.`);
+            }
+
+            if (ApiError instanceof ApiError &amp;&amp; error.type === &apos;test-concurrency-limit&apos;) {
+                throw new TestError(&apos;Too many concurrent tests running at the moment, try again later.&apos;);
+            }
+
+            throw error;
+        }
+    }
+
+    /**
+     * Invokes step phase of test.
+     */
+    async step(): Promise&lt;void&gt; {
+        try {
+            await this._controlApi.step(this.id);
+
+        } catch (error) {
+            if (ApiError instanceof ApiError &amp;&amp; error.type === &apos;unsupported-api-version&apos;) {
+                throw new TestError(&apos;Unsupported API version.&apos;);
+            }
+
+            if (ApiError instanceof ApiError &amp;&amp; error.type === &apos;unknown-test&apos;) {
+                throw new TestError(`Unable to step unknown test &quot;${this.id}&quot;.`);
+            }
+
+            if (ApiError instanceof ApiError &amp;&amp; error.type === &apos;unexpected-step&apos;) {
+                throw new TestError(`Unexpected step of test &quot;${this.id}&quot; using scenario &quot;${this.scenario}&quot;.`);
+            }
+
+            if (ApiError instanceof ApiError &amp;&amp; error.type === &apos;step-failed&apos;) {
+                throw new TestError(`Step of test &quot;${this.id}&quot; using scenario &quot;${this.scenario}&quot; failed with error.`);
+            }
+
+            throw error;
+        }
+    }
+
+    /**
+     * Invokes teardown phase of test.
+     */
+    async teardown(): Promise&lt;void&gt; {
+        try {
+            await this._controlApi.teardown(this.id);
+
+        } catch (error) {
+            if (ApiError instanceof ApiError &amp;&amp; error.type === &apos;unsupported-api-version&apos;) {
+                throw new TestError(&apos;Unsupported API version.&apos;);
+            }
+
+            if (ApiError instanceof ApiError &amp;&amp; error.type === &apos;unknown-test&apos;) {
+                throw new TestError(`Unable to teardown unknown test &quot;${this.id}&quot;.`);
+            }
+
+            if (ApiError instanceof ApiError &amp;&amp; error.type === &apos;teardown-failed&apos;) {
+                throw new TestError(`Teardown of test &quot;${this.id}&quot; using scenario &quot;${this.scenario}&quot; failed with error.`);
+            }
+
+            throw error;
+        }
+    }
+}
+
+export default Test;
+export {
+    TestError,
+};
+</code></pre>
+
+</div>
+
+<footer class="footer">
+  Generated by <a href="https://esdoc.org">ESDoc<span data-ice="esdocVersion">(1.1.0)</span><img src="./image/esdoc-logo-mini-black.png"></a>
+</footer>
+
+<script src="script/search_index.js"></script>
+<script src="script/search.js"></script>
+<script src="script/pretty-print.js"></script>
+<script src="script/inherited-summary.js"></script>
+<script src="script/test-summary.js"></script>
+<script src="script/inner-link.js"></script>
+<script src="script/patch-for-local.js"></script>
+</body>
+</html>

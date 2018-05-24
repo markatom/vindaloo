@@ -1,0 +1,8 @@
+{
+    "globals": {
+        "scenario": false,
+        "setup": false,
+        "step": false,
+        "teardown": false
+    }
+}

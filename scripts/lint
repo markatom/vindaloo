@@ -1,0 +1,5 @@
+#!/bin/sh
+
+set -e
+
+node_modules/.bin/eslint --color src tests examples/client/src examples/client/tests examples/server/src examples/server/tests $@

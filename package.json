@@ -1,0 +1,88 @@
+{
+  "name": "vindaloo",
+  "description": "Painless integragration testing.",
+  "version": "0.1.0",
+  "main": "build/vindaloo.js",
+  "bin": {
+    "vindaloo": "bin/vindaloo"
+  },
+  "engines": {
+    "node": ">= 8"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/markatom/vindaloo"
+  },
+  "license": "MIT",
+  "keywords": [
+    "test",
+    "testing",
+    "integration",
+    "client",
+    "server",
+    "producer",
+    "consumer",
+    "painless",
+    "expect",
+    "jest",
+    "mock"
+  ],
+  "author": {
+    "name": "Tomáš Markacz",
+    "email": "tomas@markacz.com",
+    "url": "http://markacz.com"
+  },
+  "scripts": {
+    "build": "scripts/build",
+    "check-all": "scripts/check-all",
+    "flow": "scripts/flow",
+    "generate-docs": "scripts/generate-docs",
+    "jest": "scripts/jest",
+    "lint": "scripts/lint",
+    "watch": "scripts/watch"
+  },
+  "dependencies": {
+    "expect": "^22.4.3",
+    "find-root": "^1.1.0",
+    "jest-environment-node": "^22.4.3",
+    "jest-resolve": "^22.4.3",
+    "jest-runtime": "^22.4.4",
+    "koa": "^2.5.1",
+    "koa-bodyparser": "^4.2.1",
+    "koa-route": "^3.2.0",
+    "popsicle": "^10.0.1",
+    "uuid": "^3.2.1"
+  },
+  "devDependencies": {
+    "@cookielab.io/eslint-config-server": "^0.0.6",
+    "@cookielab.io/eslint-plugin-custom-rules": "^0.0.2",
+    "babel-cli": "^6.26.0",
+    "babel-core": "^6.26.3",
+    "babel-eslint": "^8.2.3",
+    "babel-jest": "^22.4.4",
+    "babel-plugin-transform-flow-strip-types": "^6.22.0",
+    "babel-preset-node8": "^1.2.0",
+    "esdoc": "^1.1.0",
+    "esdoc-ecmascript-proposal-plugin": "^1.0.0",
+    "esdoc-flow-type-plugin": "^1.1.0",
+    "esdoc-standard-plugin": "^1.0.0",
+    "eslint": "^4.19.1",
+    "eslint-plugin-filenames": "^1.2.0",
+    "eslint-plugin-flowtype": "^2.47.1",
+    "eslint-plugin-import": "^2.12.0",
+    "flow-bin": "^0.72.0",
+    "flow-copy-source": "^1.3.0",
+    "flow-typed": "^2.4.0",
+    "jest": "^22.4.4"
+  },
+  "jest": {
+    "roots": [
+      "<rootDir>/src",
+      "<rootDir>/tests"
+    ],
+    "testEnvironment": "node",
+    "collectCoverageFrom": [
+      "src/**/*.js"
+    ]
+  }
+}

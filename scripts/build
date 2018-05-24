@@ -1,0 +1,7 @@
+#!/bin/sh
+
+set -e
+
+rm -rf build
+node_modules/.bin/babel src --out-dir=build --copy-files
+node_modules/.bin/flow-copy-source -v src build

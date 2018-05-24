@@ -1,0 +1,6 @@
+#!/bin/sh
+
+set -e
+
+rm -rf build
+node_modules/.bin/babel --watch=src --out-dir=build --copy-files --source-maps

@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <base data-ice="baseUrl" href="../../">
+  <title data-ice="title">client/ControlApi.js | Vindaloo</title>
+  <link type="text/css" rel="stylesheet" href="css/style.css">
+  <link type="text/css" rel="stylesheet" href="css/prettify-tomorrow.css">
+  <script src="script/prettify/prettify.js"></script>
+  <script src="script/manual.js"></script>
+<meta name="description" content="Painless integragration testing."><meta property="twitter:card" content="summary"><meta property="twitter:title" content="Vindaloo"><meta property="twitter:description" content="Painless integragration testing."></head>
+<body class="layout-container" data-ice="rootContainer">
+
+<header>
+  <a href="./">Home</a>
+  
+  <a href="identifiers.html">Reference</a>
+  <a href="source.html">Source</a>
+  
+  <div class="search-box">
+  <span>
+    <img src="./image/search.png">
+    <span class="search-input-edge"></span><input class="search-input"><span class="search-input-edge"></span>
+  </span>
+    <ul class="search-result"></ul>
+  </div>
+<a style="position:relative; top:3px;" href="https://github.com/markatom/vindaloo"><img width="20px" src="./image/github.png"></a></header>
+
+<nav class="navigation" data-ice="nav"><div>
+  <ul>
+    
+  <li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/client/Client.js~Client.html">Client</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/client/Test.js~Test.html">Test</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/client/Test.js~TestError.html">TestError</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-typedef">T</span><span data-ice="name"><span><a href="typedef/index.html#static-typedef-Configuration">Configuration</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-typedef">T</span><span data-ice="name"><span><a href="typedef/index.html#static-typedef-Binding">Binding</a></span></span></li>
+</ul>
+</div>
+</nav>
+
+<div class="content" data-ice="content"><h1 data-ice="title">client/ControlApi.js</h1>
+<pre class="source-code line-number raw-source-code"><code class="prettyprint linenums" data-ice="content">// @flow
+
+import * as popsicle from &apos;popsicle&apos;;
+import type {CompleteConfiguration} from &apos;./Client&apos;;
+
+type SetupResponse = {
+    test: {
+        binding: {
+            port: number,
+        } | {
+            header: {
+                name: string,
+                value: string,
+            },
+        },
+        timeout: number,
+    },
+};
+
+const request = popsicle.defaults({
+    use: [
+        popsicle.plugins.stringify(),
+        popsicle.plugins.parse(&apos;json&apos;),
+        popsicle.plugins.headers(),
+    ],
+});
+
+/**
+ * @ignore
+ */
+export class ApiError extends Error {
+    type: string;
+
+    constructor(type: string, message: string): void {
+        super(message);
+        this.type = type;
+    }
+}
+
+/**
+ * @ignore
+ */
+export default class ControlApi {
+    configuration: CompleteConfiguration;
+
+    constructor(configuration: CompleteConfiguration): void {
+        this.configuration = configuration;
+    }
+
+    async setup(testId: string, scenario: string): Promise&lt;SetupResponse&gt; {
+        return await this._request(&apos;/setup&apos;, {
+            version: 1,
+            test: {
+                id: testId,
+                scenario: {
+                    name: scenario,
+                },
+                binding: {
+                    type: this.configuration.bindingType,
+                },
+            },
+        });
+    }
+
+    async step(testId: string): Promise&lt;void&gt; {
+        await this._request(&apos;/step&apos;, {
+            version: 1,
+            test: {
+                id: testId,
+            },
+        });
+    }
+
+    async teardown(testId: string): Promise&lt;void&gt; {
+        await this._request(&apos;/teardown&apos;, {
+            version: 1,
+            test: {
+                id: testId,
+            },
+        });
+    }
+
+    async _request(endpoint: string, data: {}): Promise&lt;{}&gt; {
+        const response = await request({
+            method: &apos;POST&apos;,
+            url: `http://${this.configuration.host}:${this.configuration.port}${this.configuration.endpointsPrefix}${endpoint}`,
+            headers: {
+                &apos;Content-Type&apos;: &apos;application/json&apos;,
+            },
+            body: data,
+        });
+
+        if (response.status &gt;= 200 &amp;&amp; response.status &lt; 300) {
+            return response.body;
+        }
+
+        if (response.body.type != null &amp;&amp; response.body.message != null) {
+            throw new ApiError(response.body.type, response.body.message);
+        }
+
+        throw new Error(&apos;Unexpected control API error.&apos;);
+    }
+}
+</code></pre>
+
+</div>
+
+<footer class="footer">
+  Generated by <a href="https://esdoc.org">ESDoc<span data-ice="esdocVersion">(1.1.0)</span><img src="./image/esdoc-logo-mini-black.png"></a>
+</footer>
+
+<script src="script/search_index.js"></script>
+<script src="script/search.js"></script>
+<script src="script/pretty-print.js"></script>
+<script src="script/inherited-summary.js"></script>
+<script src="script/test-summary.js"></script>
+<script src="script/inner-link.js"></script>
+<script src="script/patch-for-local.js"></script>
+</body>
+</html>

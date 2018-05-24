@@ -1,0 +1,1473 @@
+[
+  {
+    "__docId__": 1,
+    "kind": "external",
+    "name": "Infinity",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Infinity",
+    "memberof": "client/.external-ecmascript.js",
+    "static": true,
+    "longname": "client/.external-ecmascript.js~Infinity",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 2,
+    "kind": "external",
+    "name": "NaN",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/NaN",
+    "memberof": "client/.external-ecmascript.js",
+    "static": true,
+    "longname": "client/.external-ecmascript.js~NaN",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 3,
+    "kind": "external",
+    "name": "undefined",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined",
+    "memberof": "client/.external-ecmascript.js",
+    "static": true,
+    "longname": "client/.external-ecmascript.js~undefined",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 4,
+    "kind": "external",
+    "name": "null",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/null",
+    "memberof": "client/.external-ecmascript.js",
+    "static": true,
+    "longname": "client/.external-ecmascript.js~null",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 5,
+    "kind": "external",
+    "name": "Object",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object",
+    "memberof": "client/.external-ecmascript.js",
+    "static": true,
+    "longname": "client/.external-ecmascript.js~Object",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 6,
+    "kind": "external",
+    "name": "object",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object",
+    "memberof": "client/.external-ecmascript.js",
+    "static": true,
+    "longname": "client/.external-ecmascript.js~object",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 7,
+    "kind": "external",
+    "name": "Function",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function",
+    "memberof": "client/.external-ecmascript.js",
+    "static": true,
+    "longname": "client/.external-ecmascript.js~Function",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 8,
+    "kind": "external",
+    "name": "function",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function",
+    "memberof": "client/.external-ecmascript.js",
+    "static": true,
+    "longname": "client/.external-ecmascript.js~function",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 9,
+    "kind": "external",
+    "name": "Boolean",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean",
+    "memberof": "client/.external-ecmascript.js",
+    "static": true,
+    "longname": "client/.external-ecmascript.js~Boolean",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 10,
+    "kind": "external",
+    "name": "boolean",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean",
+    "memberof": "client/.external-ecmascript.js",
+    "static": true,
+    "longname": "client/.external-ecmascript.js~boolean",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 11,
+    "kind": "external",
+    "name": "Symbol",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol",
+    "memberof": "client/.external-ecmascript.js",
+    "static": true,
+    "longname": "client/.external-ecmascript.js~Symbol",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 12,
+    "kind": "external",
+    "name": "Error",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Error",
+    "memberof": "client/.external-ecmascript.js",
+    "static": true,
+    "longname": "client/.external-ecmascript.js~Error",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 13,
+    "kind": "external",
+    "name": "EvalError",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/EvalError",
+    "memberof": "client/.external-ecmascript.js",
+    "static": true,
+    "longname": "client/.external-ecmascript.js~EvalError",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 14,
+    "kind": "external",
+    "name": "InternalError",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/InternalError",
+    "memberof": "client/.external-ecmascript.js",
+    "static": true,
+    "longname": "client/.external-ecmascript.js~InternalError",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 15,
+    "kind": "external",
+    "name": "RangeError",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/RangeError",
+    "memberof": "client/.external-ecmascript.js",
+    "static": true,
+    "longname": "client/.external-ecmascript.js~RangeError",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 16,
+    "kind": "external",
+    "name": "ReferenceError",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/ReferenceError",
+    "memberof": "client/.external-ecmascript.js",
+    "static": true,
+    "longname": "client/.external-ecmascript.js~ReferenceError",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 17,
+    "kind": "external",
+    "name": "SyntaxError",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/SyntaxError",
+    "memberof": "client/.external-ecmascript.js",
+    "static": true,
+    "longname": "client/.external-ecmascript.js~SyntaxError",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 18,
+    "kind": "external",
+    "name": "TypeError",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypeError",
+    "memberof": "client/.external-ecmascript.js",
+    "static": true,
+    "longname": "client/.external-ecmascript.js~TypeError",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 19,
+    "kind": "external",
+    "name": "URIError",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/URIError",
+    "memberof": "client/.external-ecmascript.js",
+    "static": true,
+    "longname": "client/.external-ecmascript.js~URIError",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 20,
+    "kind": "external",
+    "name": "Number",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number",
+    "memberof": "client/.external-ecmascript.js",
+    "static": true,
+    "longname": "client/.external-ecmascript.js~Number",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 21,
+    "kind": "external",
+    "name": "number",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number",
+    "memberof": "client/.external-ecmascript.js",
+    "static": true,
+    "longname": "client/.external-ecmascript.js~number",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 22,
+    "kind": "external",
+    "name": "Date",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date",
+    "memberof": "client/.external-ecmascript.js",
+    "static": true,
+    "longname": "client/.external-ecmascript.js~Date",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 23,
+    "kind": "external",
+    "name": "String",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String",
+    "memberof": "client/.external-ecmascript.js",
+    "static": true,
+    "longname": "client/.external-ecmascript.js~String",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 24,
+    "kind": "external",
+    "name": "string",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String",
+    "memberof": "client/.external-ecmascript.js",
+    "static": true,
+    "longname": "client/.external-ecmascript.js~string",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 25,
+    "kind": "external",
+    "name": "RegExp",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp",
+    "memberof": "client/.external-ecmascript.js",
+    "static": true,
+    "longname": "client/.external-ecmascript.js~RegExp",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 26,
+    "kind": "external",
+    "name": "Array",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array",
+    "memberof": "client/.external-ecmascript.js",
+    "static": true,
+    "longname": "client/.external-ecmascript.js~Array",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 27,
+    "kind": "external",
+    "name": "Int8Array",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Int8Array",
+    "memberof": "client/.external-ecmascript.js",
+    "static": true,
+    "longname": "client/.external-ecmascript.js~Int8Array",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 28,
+    "kind": "external",
+    "name": "Uint8Array",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Uint8Array",
+    "memberof": "client/.external-ecmascript.js",
+    "static": true,
+    "longname": "client/.external-ecmascript.js~Uint8Array",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 29,
+    "kind": "external",
+    "name": "Uint8ClampedArray",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Uint8ClampedArray",
+    "memberof": "client/.external-ecmascript.js",
+    "static": true,
+    "longname": "client/.external-ecmascript.js~Uint8ClampedArray",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 30,
+    "kind": "external",
+    "name": "Int16Array",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Int16Array",
+    "memberof": "client/.external-ecmascript.js",
+    "static": true,
+    "longname": "client/.external-ecmascript.js~Int16Array",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 31,
+    "kind": "external",
+    "name": "Uint16Array",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Uint16Array",
+    "memberof": "client/.external-ecmascript.js",
+    "static": true,
+    "longname": "client/.external-ecmascript.js~Uint16Array",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 32,
+    "kind": "external",
+    "name": "Int32Array",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Int32Array",
+    "memberof": "client/.external-ecmascript.js",
+    "static": true,
+    "longname": "client/.external-ecmascript.js~Int32Array",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 33,
+    "kind": "external",
+    "name": "Uint32Array",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Uint32Array",
+    "memberof": "client/.external-ecmascript.js",
+    "static": true,
+    "longname": "client/.external-ecmascript.js~Uint32Array",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 34,
+    "kind": "external",
+    "name": "Float32Array",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Float32Array",
+    "memberof": "client/.external-ecmascript.js",
+    "static": true,
+    "longname": "client/.external-ecmascript.js~Float32Array",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 35,
+    "kind": "external",
+    "name": "Float64Array",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Float64Array",
+    "memberof": "client/.external-ecmascript.js",
+    "static": true,
+    "longname": "client/.external-ecmascript.js~Float64Array",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 36,
+    "kind": "external",
+    "name": "Map",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Map",
+    "memberof": "client/.external-ecmascript.js",
+    "static": true,
+    "longname": "client/.external-ecmascript.js~Map",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 37,
+    "kind": "external",
+    "name": "Set",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Set",
+    "memberof": "client/.external-ecmascript.js",
+    "static": true,
+    "longname": "client/.external-ecmascript.js~Set",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 38,
+    "kind": "external",
+    "name": "WeakMap",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/WeakMap",
+    "memberof": "client/.external-ecmascript.js",
+    "static": true,
+    "longname": "client/.external-ecmascript.js~WeakMap",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 39,
+    "kind": "external",
+    "name": "WeakSet",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/WeakSet",
+    "memberof": "client/.external-ecmascript.js",
+    "static": true,
+    "longname": "client/.external-ecmascript.js~WeakSet",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 40,
+    "kind": "external",
+    "name": "ArrayBuffer",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer",
+    "memberof": "client/.external-ecmascript.js",
+    "static": true,
+    "longname": "client/.external-ecmascript.js~ArrayBuffer",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 41,
+    "kind": "external",
+    "name": "DataView",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/DataView",
+    "memberof": "client/.external-ecmascript.js",
+    "static": true,
+    "longname": "client/.external-ecmascript.js~DataView",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 42,
+    "kind": "external",
+    "name": "JSON",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON",
+    "memberof": "client/.external-ecmascript.js",
+    "static": true,
+    "longname": "client/.external-ecmascript.js~JSON",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 43,
+    "kind": "external",
+    "name": "Promise",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise",
+    "memberof": "client/.external-ecmascript.js",
+    "static": true,
+    "longname": "client/.external-ecmascript.js~Promise",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 44,
+    "kind": "external",
+    "name": "Generator",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Generator",
+    "memberof": "client/.external-ecmascript.js",
+    "static": true,
+    "longname": "client/.external-ecmascript.js~Generator",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 45,
+    "kind": "external",
+    "name": "GeneratorFunction",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/GeneratorFunction",
+    "memberof": "client/.external-ecmascript.js",
+    "static": true,
+    "longname": "client/.external-ecmascript.js~GeneratorFunction",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 46,
+    "kind": "external",
+    "name": "Reflect",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Reflect",
+    "memberof": "client/.external-ecmascript.js",
+    "static": true,
+    "longname": "client/.external-ecmascript.js~Reflect",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 47,
+    "kind": "external",
+    "name": "Proxy",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Proxy",
+    "memberof": "client/.external-ecmascript.js",
+    "static": true,
+    "longname": "client/.external-ecmascript.js~Proxy",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 48,
+    "kind": "file",
+    "name": "client/Client.js",
+    "content": "// @flow\n\nimport ControlApi from './ControlApi';\nimport normalizeResource from '../normalizeResource';\nimport Test from './Test';\nimport uuid from 'uuid/v4';\n\nexport type BindingType = 'port' | 'header';\n\nexport type SetupBinding = (portOrHeaderName: number | string, headerValue?: string) => void;\n\n/**\n * Client configuration object.\n * @typedef {Object} Configuration\n * @property {string} host - Host where server is running.\n * @property {number} port - Port where server is listening.\n * @property {string} endpointsPrefix - Prefix for control API's endpoints.\n * @property {function(headerName: string, headerValue: string): void | function(port: number): void} setupBinding - Function passing binding values of each test.\n */\nexport type Configuration = {\n    host?: string,\n    port?: number,\n    endpointsPrefix?: string,\n    bindingType?: BindingType,\n    setupBinding?: SetupBinding,\n};\n\nexport type CompleteConfiguration = {\n    host: string,\n    port: number,\n    endpointsPrefix: string,\n    bindingType: BindingType,\n    setupBinding: SetupBinding,\n};\n\nconst configurationDefaults = {\n    host: '127.0.0.1',\n    port: 3000,\n    endpointsPrefix: '/vindaloo',\n    bindingType: 'port',\n    setupBinding: () => undefined,\n};\n\n/**\n * Client holds configuration and is responsible for creating test instances.\n */\nexport default class Client {\n    /** @ignore */\n    _configuration: CompleteConfiguration;\n    /** @ignore */\n    _controlApi: ControlApi;\n\n    constructor(configuration: Configuration): void {\n        this._configuration = Object.assign({}, configurationDefaults, configuration);\n\n        this._configuration.endpointsPrefix = '/' + normalizeResource('/', this._configuration.endpointsPrefix);\n\n        this._controlApi = new ControlApi(this._configuration);\n    }\n\n    /**\n     * Creates new test instance.\n     * @param scenario - Name of scenario used by test.\n     * @param [id] - Test identifier, if omitted, UUID v4 will be generated.\n     * @returns Configured test instance.\n     */\n    createTest(scenario: string, id?: string): Test {\n        const testId = id != null ? id : uuid();\n\n        return new Test(this._controlApi, this._configuration.bindingType, this._configuration.setupBinding, testId, scenario);\n    }\n}\n",
+    "static": true,
+    "longname": "/Users/tomas/skola/integration/src/client/Client.js",
+    "access": "public",
+    "description": null,
+    "lineNumber": 1
+  },
+  {
+    "__docId__": 49,
+    "kind": "typedef",
+    "name": "Configuration",
+    "memberof": "client/Client.js",
+    "static": true,
+    "longname": "client/Client.js~Configuration",
+    "access": "public",
+    "description": "Client configuration object.",
+    "lineNumber": 20,
+    "properties": [
+      {
+        "nullable": null,
+        "types": [
+          "string"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "host",
+        "description": "Host where server is running."
+      },
+      {
+        "nullable": null,
+        "types": [
+          "number"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "port",
+        "description": "Port where server is listening."
+      },
+      {
+        "nullable": null,
+        "types": [
+          "string"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "endpointsPrefix",
+        "description": "Prefix for control API's endpoints."
+      },
+      {
+        "nullable": null,
+        "types": [
+          "function(headerName: string, headerValue: string): void ",
+          " function(port: number): void"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "setupBinding",
+        "description": "Function passing binding values of each test."
+      }
+    ],
+    "type": {
+      "types": [
+        "Object"
+      ],
+      "optional": false,
+      "name": "Configuration"
+    }
+  },
+  {
+    "__docId__": 50,
+    "kind": "variable",
+    "name": "configurationDefaults",
+    "memberof": "client/Client.js",
+    "static": true,
+    "longname": "client/Client.js~configurationDefaults",
+    "access": "public",
+    "export": false,
+    "importPath": "Vindaloo/client/Client.js",
+    "importStyle": null,
+    "description": null,
+    "lineNumber": 36,
+    "undocument": true,
+    "type": {
+      "types": [
+        "{\"host\": string, \"port\": number, \"endpointsPrefix\": string, \"bindingType\": string, \"setupBinding\": *}"
+      ]
+    },
+    "ignore": true
+  },
+  {
+    "__docId__": 51,
+    "kind": "class",
+    "name": "Client",
+    "memberof": "client/Client.js",
+    "static": true,
+    "longname": "client/Client.js~Client",
+    "access": "public",
+    "export": true,
+    "importPath": "Vindaloo/client/Client.js",
+    "importStyle": "Client",
+    "description": "Client holds configuration and is responsible for creating test instances.",
+    "lineNumber": 47,
+    "interface": false
+  },
+  {
+    "__docId__": 52,
+    "kind": "member",
+    "name": "_configuration",
+    "memberof": "client/Client.js~Client",
+    "static": false,
+    "longname": "client/Client.js~Client#_configuration",
+    "access": "private",
+    "description": "",
+    "lineNumber": 49,
+    "ignore": true,
+    "type": {
+      "nullable": null,
+      "types": [
+        "CompleteConfiguration"
+      ],
+      "spread": false,
+      "description": null
+    }
+  },
+  {
+    "__docId__": 53,
+    "kind": "member",
+    "name": "_controlApi",
+    "memberof": "client/Client.js~Client",
+    "static": false,
+    "longname": "client/Client.js~Client#_controlApi",
+    "access": "private",
+    "description": "",
+    "lineNumber": 51,
+    "ignore": true,
+    "type": {
+      "nullable": null,
+      "types": [
+        "ControlApi"
+      ],
+      "spread": false,
+      "description": null
+    }
+  },
+  {
+    "__docId__": 54,
+    "kind": "constructor",
+    "name": "constructor",
+    "memberof": "client/Client.js~Client",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "client/Client.js~Client#constructor",
+    "access": "public",
+    "description": "",
+    "lineNumber": 53,
+    "params": [
+      {
+        "nullable": null,
+        "types": [
+          "Configuration"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "configuration",
+        "description": ""
+      }
+    ]
+  },
+  {
+    "__docId__": 57,
+    "kind": "method",
+    "name": "createTest",
+    "memberof": "client/Client.js~Client",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "client/Client.js~Client#createTest",
+    "access": "public",
+    "description": "Creates new test instance.  ",
+    "lineNumber": 67,
+    "unknown": [
+      {
+        "tagName": "@returns",
+        "tagValue": "{Test} Configured test instance.  "
+      }
+    ],
+    "params": [
+      {
+        "nullable": null,
+        "types": [
+          "string"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "scenario",
+        "description": "Name of scenario used by test."
+      },
+      {
+        "nullable": null,
+        "types": [
+          "string"
+        ],
+        "spread": false,
+        "optional": true,
+        "name": "id",
+        "description": "Test identifier, if omitted, UUID v4 will be generated."
+      }
+    ],
+    "return": {
+      "nullable": null,
+      "types": [
+        "Test"
+      ],
+      "spread": false,
+      "description": "Configured test instance."
+    }
+  },
+  {
+    "__docId__": 58,
+    "kind": "file",
+    "name": "client/ControlApi.js",
+    "content": "// @flow\n\nimport * as popsicle from 'popsicle';\nimport type {CompleteConfiguration} from './Client';\n\ntype SetupResponse = {\n    test: {\n        binding: {\n            port: number,\n        } | {\n            header: {\n                name: string,\n                value: string,\n            },\n        },\n        timeout: number,\n    },\n};\n\nconst request = popsicle.defaults({\n    use: [\n        popsicle.plugins.stringify(),\n        popsicle.plugins.parse('json'),\n        popsicle.plugins.headers(),\n    ],\n});\n\n/**\n * @ignore\n */\nexport class ApiError extends Error {\n    type: string;\n\n    constructor(type: string, message: string): void {\n        super(message);\n        this.type = type;\n    }\n}\n\n/**\n * @ignore\n */\nexport default class ControlApi {\n    configuration: CompleteConfiguration;\n\n    constructor(configuration: CompleteConfiguration): void {\n        this.configuration = configuration;\n    }\n\n    async setup(testId: string, scenario: string): Promise<SetupResponse> {\n        return await this._request('/setup', {\n            version: 1,\n            test: {\n                id: testId,\n                scenario: {\n                    name: scenario,\n                },\n                binding: {\n                    type: this.configuration.bindingType,\n                },\n            },\n        });\n    }\n\n    async step(testId: string): Promise<void> {\n        await this._request('/step', {\n            version: 1,\n            test: {\n                id: testId,\n            },\n        });\n    }\n\n    async teardown(testId: string): Promise<void> {\n        await this._request('/teardown', {\n            version: 1,\n            test: {\n                id: testId,\n            },\n        });\n    }\n\n    async _request(endpoint: string, data: {}): Promise<{}> {\n        const response = await request({\n            method: 'POST',\n            url: `http://${this.configuration.host}:${this.configuration.port}${this.configuration.endpointsPrefix}${endpoint}`,\n            headers: {\n                'Content-Type': 'application/json',\n            },\n            body: data,\n        });\n\n        if (response.status >= 200 && response.status < 300) {\n            return response.body;\n        }\n\n        if (response.body.type != null && response.body.message != null) {\n            throw new ApiError(response.body.type, response.body.message);\n        }\n\n        throw new Error('Unexpected control API error.');\n    }\n}\n",
+    "static": true,
+    "longname": "/Users/tomas/skola/integration/src/client/ControlApi.js",
+    "access": "public",
+    "description": null,
+    "lineNumber": 1
+  },
+  {
+    "__docId__": 59,
+    "kind": "variable",
+    "name": "request",
+    "memberof": "client/ControlApi.js",
+    "static": true,
+    "longname": "client/ControlApi.js~request",
+    "access": "public",
+    "export": false,
+    "importPath": "Vindaloo/client/ControlApi.js",
+    "importStyle": null,
+    "description": null,
+    "lineNumber": 20,
+    "undocument": true,
+    "type": {
+      "types": [
+        "*"
+      ]
+    },
+    "ignore": true
+  },
+  {
+    "__docId__": 60,
+    "kind": "class",
+    "name": "ApiError",
+    "memberof": "client/ControlApi.js",
+    "static": true,
+    "longname": "client/ControlApi.js~ApiError",
+    "access": "public",
+    "export": true,
+    "importPath": "Vindaloo/client/ControlApi.js",
+    "importStyle": "{ApiError}",
+    "description": "",
+    "lineNumber": 31,
+    "ignore": true,
+    "interface": false,
+    "extends": [
+      "Error"
+    ]
+  },
+  {
+    "__docId__": 61,
+    "kind": "member",
+    "name": "type",
+    "memberof": "client/ControlApi.js~ApiError",
+    "static": false,
+    "longname": "client/ControlApi.js~ApiError#type",
+    "access": "public",
+    "description": "",
+    "lineNumber": 32,
+    "type": {
+      "nullable": null,
+      "types": [
+        "string"
+      ],
+      "spread": false,
+      "description": null
+    }
+  },
+  {
+    "__docId__": 62,
+    "kind": "constructor",
+    "name": "constructor",
+    "memberof": "client/ControlApi.js~ApiError",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "client/ControlApi.js~ApiError#constructor",
+    "access": "public",
+    "description": "",
+    "lineNumber": 34,
+    "params": [
+      {
+        "nullable": null,
+        "types": [
+          "string"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "type",
+        "description": ""
+      },
+      {
+        "nullable": null,
+        "types": [
+          "string"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "message",
+        "description": ""
+      }
+    ]
+  },
+  {
+    "__docId__": 64,
+    "kind": "class",
+    "name": "ControlApi",
+    "memberof": "client/ControlApi.js",
+    "static": true,
+    "longname": "client/ControlApi.js~ControlApi",
+    "access": "public",
+    "export": true,
+    "importPath": "Vindaloo/client/ControlApi.js",
+    "importStyle": "ControlApi",
+    "description": "",
+    "lineNumber": 43,
+    "ignore": true,
+    "interface": false
+  },
+  {
+    "__docId__": 65,
+    "kind": "member",
+    "name": "configuration",
+    "memberof": "client/ControlApi.js~ControlApi",
+    "static": false,
+    "longname": "client/ControlApi.js~ControlApi#configuration",
+    "access": "public",
+    "description": "",
+    "lineNumber": 44,
+    "type": {
+      "nullable": null,
+      "types": [
+        "CompleteConfiguration"
+      ],
+      "spread": false,
+      "description": null
+    }
+  },
+  {
+    "__docId__": 66,
+    "kind": "constructor",
+    "name": "constructor",
+    "memberof": "client/ControlApi.js~ControlApi",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "client/ControlApi.js~ControlApi#constructor",
+    "access": "public",
+    "description": "",
+    "lineNumber": 46,
+    "params": [
+      {
+        "nullable": null,
+        "types": [
+          "CompleteConfiguration"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "configuration",
+        "description": ""
+      }
+    ]
+  },
+  {
+    "__docId__": 68,
+    "kind": "method",
+    "name": "setup",
+    "memberof": "client/ControlApi.js~ControlApi",
+    "generator": false,
+    "async": true,
+    "static": false,
+    "longname": "client/ControlApi.js~ControlApi#setup",
+    "access": "public",
+    "description": " ",
+    "lineNumber": 50,
+    "params": [
+      {
+        "nullable": null,
+        "types": [
+          "string"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "testId",
+        "description": ""
+      },
+      {
+        "nullable": null,
+        "types": [
+          "string"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "scenario",
+        "description": ""
+      }
+    ],
+    "return": {
+      "nullable": null,
+      "types": [
+        "Promise<SetupResponse>"
+      ],
+      "spread": false,
+      "description": ""
+    }
+  },
+  {
+    "__docId__": 69,
+    "kind": "method",
+    "name": "step",
+    "memberof": "client/ControlApi.js~ControlApi",
+    "generator": false,
+    "async": true,
+    "static": false,
+    "longname": "client/ControlApi.js~ControlApi#step",
+    "access": "public",
+    "description": " ",
+    "lineNumber": 65,
+    "params": [
+      {
+        "nullable": null,
+        "types": [
+          "string"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "testId",
+        "description": ""
+      }
+    ],
+    "return": {
+      "nullable": null,
+      "types": [
+        "Promise<void>"
+      ],
+      "spread": false,
+      "description": ""
+    }
+  },
+  {
+    "__docId__": 70,
+    "kind": "method",
+    "name": "teardown",
+    "memberof": "client/ControlApi.js~ControlApi",
+    "generator": false,
+    "async": true,
+    "static": false,
+    "longname": "client/ControlApi.js~ControlApi#teardown",
+    "access": "public",
+    "description": " ",
+    "lineNumber": 74,
+    "params": [
+      {
+        "nullable": null,
+        "types": [
+          "string"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "testId",
+        "description": ""
+      }
+    ],
+    "return": {
+      "nullable": null,
+      "types": [
+        "Promise<void>"
+      ],
+      "spread": false,
+      "description": ""
+    }
+  },
+  {
+    "__docId__": 71,
+    "kind": "method",
+    "name": "_request",
+    "memberof": "client/ControlApi.js~ControlApi",
+    "generator": false,
+    "async": true,
+    "static": false,
+    "longname": "client/ControlApi.js~ControlApi#_request",
+    "access": "private",
+    "description": " ",
+    "lineNumber": 83,
+    "params": [
+      {
+        "nullable": null,
+        "types": [
+          "string"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "endpoint",
+        "description": ""
+      },
+      {
+        "nullable": null,
+        "types": [
+          "object"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "data",
+        "description": ""
+      }
+    ],
+    "return": {
+      "nullable": null,
+      "types": [
+        "Promise<object>"
+      ],
+      "spread": false,
+      "description": ""
+    }
+  },
+  {
+    "__docId__": 72,
+    "kind": "file",
+    "name": "client/Test.js",
+    "content": "// @flow\n\nimport ControlApi, {ApiError} from './ControlApi';\nimport type {BindingType, SetupBinding} from './Client';\n\n/**\n * Binding of current test.\n * @typedef {Object} Binding\n * @property {string} type - Type of used binding method.\n * @property {{name: string, value: string}} header - Header name and value.\n */\nexport type Binding = {\n    type: 'header',\n    header: {\n        name: string,\n        value: string,\n    },\n} | {\n    type: 'port',\n    port: number,\n};\n\n/**\n * Error representing failed test.\n */\nclass TestError extends Error {\n}\n\n/**\n * Configured test using given scenario.\n */\nclass Test {\n    /** @ignore */\n    _controlApi: ControlApi;\n    /** @ignore */\n    _bindingType: BindingType;\n    /** @ignore */\n    _setupBinding: SetupBinding;\n    id: string;\n    scenario: string;\n    timeout: ?number;\n    binding: ?Binding;\n\n    /**\n     * @ignore\n     */\n    constructor(controlApi: ControlApi, bindingType: BindingType, setupBinding: SetupBinding, testId: string, scenario: string): void {\n        this._controlApi = controlApi;\n        this._bindingType = bindingType;\n        this._setupBinding = setupBinding;\n        this.id = testId;\n        this.scenario = scenario;\n    }\n\n    /**\n     * Invokes setup phase of test.\n     */\n    async setup(): Promise<void> {\n        try {\n            const response = await this._controlApi.setup(this.id, this.scenario);\n\n            // $FlowFixMe\n            this.binding = Object.assign({}, {type: this._bindingType}, response.test.binding);\n            this.timeout = response.test.timeout;\n\n            if (this.binding.type === 'port') {\n                this._setupBinding(this.binding.port);\n\n            } else {\n                this._setupBinding(this.binding.header.name, this.binding.header.value);\n            }\n\n        } catch (error) {\n            if (ApiError instanceof ApiError && error.type === 'unsupported-api-version') {\n                throw new TestError('Unsupported API version.');\n            }\n\n            if (ApiError instanceof ApiError && error.type === 'unsupported-binding-type') {\n                throw new TestError('Unsupported binding type.');\n            }\n\n            if (ApiError instanceof ApiError && error.type === 'unknown-scenario') {\n                throw new TestError(`Unable to setup test by unknown scenario \"${this.scenario}\".`);\n            }\n\n            if (ApiError instanceof ApiError && error.type === 'duplicate-test') {\n                throw new TestError(`Unable to setup test with duplicate identifier \"${this.id}\".`);\n            }\n\n            if (ApiError instanceof ApiError && error.type === 'setup-failed') {\n                throw new TestError(`Setup of test \"${this.id}\" using scenario \"${this.scenario}\" failed with error.`);\n            }\n\n            if (ApiError instanceof ApiError && error.type === 'test-concurrency-limit') {\n                throw new TestError('Too many concurrent tests running at the moment, try again later.');\n            }\n\n            throw error;\n        }\n    }\n\n    /**\n     * Invokes step phase of test.\n     */\n    async step(): Promise<void> {\n        try {\n            await this._controlApi.step(this.id);\n\n        } catch (error) {\n            if (ApiError instanceof ApiError && error.type === 'unsupported-api-version') {\n                throw new TestError('Unsupported API version.');\n            }\n\n            if (ApiError instanceof ApiError && error.type === 'unknown-test') {\n                throw new TestError(`Unable to step unknown test \"${this.id}\".`);\n            }\n\n            if (ApiError instanceof ApiError && error.type === 'unexpected-step') {\n                throw new TestError(`Unexpected step of test \"${this.id}\" using scenario \"${this.scenario}\".`);\n            }\n\n            if (ApiError instanceof ApiError && error.type === 'step-failed') {\n                throw new TestError(`Step of test \"${this.id}\" using scenario \"${this.scenario}\" failed with error.`);\n            }\n\n            throw error;\n        }\n    }\n\n    /**\n     * Invokes teardown phase of test.\n     */\n    async teardown(): Promise<void> {\n        try {\n            await this._controlApi.teardown(this.id);\n\n        } catch (error) {\n            if (ApiError instanceof ApiError && error.type === 'unsupported-api-version') {\n                throw new TestError('Unsupported API version.');\n            }\n\n            if (ApiError instanceof ApiError && error.type === 'unknown-test') {\n                throw new TestError(`Unable to teardown unknown test \"${this.id}\".`);\n            }\n\n            if (ApiError instanceof ApiError && error.type === 'teardown-failed') {\n                throw new TestError(`Teardown of test \"${this.id}\" using scenario \"${this.scenario}\" failed with error.`);\n            }\n\n            throw error;\n        }\n    }\n}\n\nexport default Test;\nexport {\n    TestError,\n};\n",
+    "static": true,
+    "longname": "/Users/tomas/skola/integration/src/client/Test.js",
+    "access": "public",
+    "description": null,
+    "lineNumber": 1
+  },
+  {
+    "__docId__": 73,
+    "kind": "typedef",
+    "name": "Binding",
+    "memberof": "client/Test.js",
+    "static": true,
+    "longname": "client/Test.js~Binding",
+    "access": "public",
+    "description": "Binding of current test.",
+    "lineNumber": 12,
+    "properties": [
+      {
+        "nullable": null,
+        "types": [
+          "string"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "type",
+        "description": "Type of used binding method."
+      },
+      {
+        "nullable": null,
+        "types": [
+          "{name: string, value: string}"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "header",
+        "description": "Header name and value."
+      }
+    ],
+    "type": {
+      "types": [
+        "Object"
+      ],
+      "optional": false,
+      "name": "Binding"
+    }
+  },
+  {
+    "__docId__": 74,
+    "kind": "class",
+    "name": "Test",
+    "memberof": "client/Test.js",
+    "static": true,
+    "longname": "client/Test.js~Test",
+    "access": "public",
+    "export": true,
+    "importPath": "Vindaloo/client/Test.js",
+    "importStyle": "Test",
+    "description": "Configured test using given scenario.",
+    "lineNumber": 32,
+    "interface": false
+  },
+  {
+    "__docId__": 75,
+    "kind": "member",
+    "name": "_controlApi",
+    "memberof": "client/Test.js~Test",
+    "static": false,
+    "longname": "client/Test.js~Test#_controlApi",
+    "access": "private",
+    "description": "",
+    "lineNumber": 34,
+    "ignore": true,
+    "type": {
+      "nullable": null,
+      "types": [
+        "ControlApi"
+      ],
+      "spread": false,
+      "description": null
+    }
+  },
+  {
+    "__docId__": 76,
+    "kind": "member",
+    "name": "_bindingType",
+    "memberof": "client/Test.js~Test",
+    "static": false,
+    "longname": "client/Test.js~Test#_bindingType",
+    "access": "private",
+    "description": "",
+    "lineNumber": 36,
+    "ignore": true,
+    "type": {
+      "nullable": null,
+      "types": [
+        "BindingType"
+      ],
+      "spread": false,
+      "description": null
+    }
+  },
+  {
+    "__docId__": 77,
+    "kind": "member",
+    "name": "_setupBinding",
+    "memberof": "client/Test.js~Test",
+    "static": false,
+    "longname": "client/Test.js~Test#_setupBinding",
+    "access": "private",
+    "description": "",
+    "lineNumber": 38,
+    "ignore": true,
+    "type": {
+      "nullable": null,
+      "types": [
+        "SetupBinding"
+      ],
+      "spread": false,
+      "description": null
+    }
+  },
+  {
+    "__docId__": 78,
+    "kind": "member",
+    "name": "id",
+    "memberof": "client/Test.js~Test",
+    "static": false,
+    "longname": "client/Test.js~Test#id",
+    "access": "public",
+    "description": "",
+    "lineNumber": 39,
+    "type": {
+      "nullable": null,
+      "types": [
+        "string"
+      ],
+      "spread": false,
+      "description": null
+    }
+  },
+  {
+    "__docId__": 79,
+    "kind": "member",
+    "name": "scenario",
+    "memberof": "client/Test.js~Test",
+    "static": false,
+    "longname": "client/Test.js~Test#scenario",
+    "access": "public",
+    "description": "",
+    "lineNumber": 40,
+    "type": {
+      "nullable": null,
+      "types": [
+        "string"
+      ],
+      "spread": false,
+      "description": null
+    }
+  },
+  {
+    "__docId__": 80,
+    "kind": "member",
+    "name": "timeout",
+    "memberof": "client/Test.js~Test",
+    "static": false,
+    "longname": "client/Test.js~Test#timeout",
+    "access": "public",
+    "description": "",
+    "lineNumber": 41,
+    "type": {
+      "nullable": true,
+      "types": [
+        "number"
+      ],
+      "spread": false,
+      "description": null
+    }
+  },
+  {
+    "__docId__": 81,
+    "kind": "member",
+    "name": "binding",
+    "memberof": "client/Test.js~Test",
+    "static": false,
+    "longname": "client/Test.js~Test#binding",
+    "access": "public",
+    "description": "",
+    "lineNumber": 42,
+    "type": {
+      "nullable": true,
+      "types": [
+        "Binding"
+      ],
+      "spread": false,
+      "description": null
+    }
+  },
+  {
+    "__docId__": 82,
+    "kind": "constructor",
+    "name": "constructor",
+    "memberof": "client/Test.js~Test",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "client/Test.js~Test#constructor",
+    "access": "public",
+    "description": " ",
+    "lineNumber": 47,
+    "ignore": true,
+    "params": [
+      {
+        "nullable": null,
+        "types": [
+          "ControlApi"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "controlApi",
+        "description": ""
+      },
+      {
+        "nullable": null,
+        "types": [
+          "BindingType"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "bindingType",
+        "description": ""
+      },
+      {
+        "nullable": null,
+        "types": [
+          "SetupBinding"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "setupBinding",
+        "description": ""
+      },
+      {
+        "nullable": null,
+        "types": [
+          "string"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "testId",
+        "description": ""
+      },
+      {
+        "nullable": null,
+        "types": [
+          "string"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "scenario",
+        "description": ""
+      }
+    ]
+  },
+  {
+    "__docId__": 88,
+    "kind": "method",
+    "name": "setup",
+    "memberof": "client/Test.js~Test",
+    "generator": false,
+    "async": true,
+    "static": false,
+    "longname": "client/Test.js~Test#setup",
+    "access": "public",
+    "description": "Invokes setup phase of test.  ",
+    "lineNumber": 58,
+    "return": {
+      "nullable": null,
+      "types": [
+        "Promise<void>"
+      ],
+      "spread": false,
+      "description": ""
+    },
+    "params": []
+  },
+  {
+    "__docId__": 91,
+    "kind": "method",
+    "name": "step",
+    "memberof": "client/Test.js~Test",
+    "generator": false,
+    "async": true,
+    "static": false,
+    "longname": "client/Test.js~Test#step",
+    "access": "public",
+    "description": "Invokes step phase of test.  ",
+    "lineNumber": 105,
+    "return": {
+      "nullable": null,
+      "types": [
+        "Promise<void>"
+      ],
+      "spread": false,
+      "description": ""
+    },
+    "params": []
+  },
+  {
+    "__docId__": 92,
+    "kind": "method",
+    "name": "teardown",
+    "memberof": "client/Test.js~Test",
+    "generator": false,
+    "async": true,
+    "static": false,
+    "longname": "client/Test.js~Test#teardown",
+    "access": "public",
+    "description": "Invokes teardown phase of test.  ",
+    "lineNumber": 133,
+    "return": {
+      "nullable": null,
+      "types": [
+        "Promise<void>"
+      ],
+      "spread": false,
+      "description": ""
+    },
+    "params": []
+  },
+  {
+    "__docId__": 93,
+    "kind": "class",
+    "name": "TestError",
+    "memberof": "client/Test.js",
+    "static": true,
+    "longname": "client/Test.js~TestError",
+    "access": "public",
+    "export": true,
+    "importPath": "Vindaloo/client/Test.js",
+    "importStyle": "{TestError}",
+    "description": "Error representing failed test.",
+    "lineNumber": 26,
+    "interface": false,
+    "extends": [
+      "Error"
+    ]
+  },
+  {
+    "kind": "index",
+    "content": "# Vindaloo\n\n* Painless integration testing of your client-server applications.\n* Test both client and server implementation together in direct communication.\n* Organize your integration tests in form of scenarios.\n\n## Getting Started\n\nInstall Vindaloo using `yarn`:\n\n```bash\nyarn add --dev vindaloo\n```\n\nOr npm, if you wish:\n\n```bash\nnpm install --save-dev vindaloo\n```\n\nPlease note that the minimum supported Node version is `8.0.0`.\n\nLet's say you have client implementation `authenticator.js` allowing users to log in:\n\n```javascript\nimport configuration from './configuration';\n\nconst login = async (email, password) => {\n    const response = await fetch(`http://${configuration.api.host}:${configuration.api.port}/login`, {\n        method: 'POST',\n        headers: Object.assign({'Content-Type': 'application/json'}, configuration.api.extraHeaders),\n        body: JSON.stringify({email, password}),\n    });\n\n    if (response.status === 401) { // unauthorized\n        throw new Error('Invalid email or password.');\n    }\n\n    return await response.json();\n};\n\nexport {\n    login,\n};\n```\n\nAnd corresponding server implementation using Koa.js framework set up in `app.js`:\n\n```javascript\nconst authenticator = require('./authenticator');\nconst bodyParser = require('koa-bodyparser');\nconst Koa = require('koa');\nconst route = require('koa-route');\n\nconst start = () => {\n    const app = new Koa();\n\n    app.use(bodyParser());\n    app.use(route.post('/login', (ctx) => {\n        try {\n            ctx.response.body = authenticator.login(ctx.request.body.email, ctx.request.body.password);\n\n        } catch (error) {\n            ctx.response.status = 401; // unauthorized\n        }\n    }));\n\n    app.listen(12345);\n};\n\nmodule.exports = {\n    start,\n};\n```\n\nIgnore the actual authenticator implementation on server side for now.\nWe want to test client-server integration.\nHow would we do that? Let's use Vindaloo, it's super easy!\n\nWe want to test two scenarios – when the user successfully logs in and when the user supplies invalid credentials.\nLet's write those scenarios down on server side:\n\n```javascript\nconst app = require('../../src/server/app');\nconst authenticator = require('../../src/server/authenticator');\n\nscenario('login:successful', () => {\n    setup(() => {\n        jest.spyOn(authenticator, 'login').mockImplementation(() => ({\n            id: 42,\n            name: 'Tomáš Markacz',\n        }));\n\n        app.start();\n    });\n\n    teardown(() => {\n        jest.restoreAllMocks();\n    });\n});\n\nscenario('login:failed', () => {\n    setup(() => {\n        jest.spyOn(authenticator, 'login').mockImplementation(() => {\n            throw new Error('Invalid password.');\n        });\n\n        app.start();\n    });\n\n    teardown(() => {\n        jest.restoreAllMocks();\n    });\n});\n```\n\nNote that this code is using global `jest`. If you don't know [Jest](https://facebook.github.io/jest/), take a look, it's a great testing framework.\nVindaloo uses some components from Jest so if you're familiar with it, you already know how to assert and mock using Vindaloo.\nHere, we're using Jest to mock implementation of `login` function from `authenticator` module.\nIt's implementation is replaced in these scenarios because we don't want to include it in integration tests.\nIt's better to write some unit tests to test its implementation separately.\nThe key thing here is `app.start()` which starts Koa application and listens for incoming requests.\nNow, to be able to execute defined scenarios, run the following:\n\n```bash\nyarn vindaloo\n``` \n\nThis will start server listening on port 3000 allowing you to run the previous scenarios and test against them.\n\nLet's write login tests on client side using Jest framework:\n\n```javascript\nimport * as authenticator from '../../src/client/authenticator';\nimport Client from '../../../src/client/Client';\nimport configuration from '../../src/client/configuration';\n\nconst client = new Client({\n    bindingType: 'header',\n    setupBinding: (headerName, headerValue) => {\n        configuration.api.extraHeaders[headerName] = headerValue;\n    },\n});\n\ndescribe('successful user authentication', () => {\n    const test = client.createTest('login:successful');\n\n    beforeAll(() => test.setup());\n    it('returns authenticated user', async () => {\n        const user = await authenticator.login('tomas@markacz.com', 'foobar');\n\n        expect(user).toEqual({\n            id: 42,\n            name: 'Tomáš Markacz',\n        });\n    });\n    afterAll(() => test.teardown());\n});\n\ndescribe('failed user authentication', () => {\n    const test = client.createTest('login:failed');\n\n    beforeAll(() => test.setup());\n    it('throws an error', async () => {\n        const promise = authenticator.login('tomas@markacz.com', 'foobar');\n\n        await expect(promise).rejects.toEqual(new Error('Invalid email or password.'));\n    });\n    afterAll(() => test.teardown());\n});\n```\n\nThis code will run two tests, each using previously written scenarios on your server, and test client implementation against them!\nThis way you can write integration tests as easily as unit tests. Isn't that great?\n\n## How It Works\n\nVindaloo consists of two parts – client and server. These parts use unified HTTP API to communicate with each other.\nCurrently, there is only JavaScript implementation of Vindaloo but the goal is to port this implementation to other programming languages as well.\n\nIntegration test is always initialized by client.\nServer offers predefined set of integration scenarios, which can be executed by the client.\nVindaloo's server is responsible for spawning and managing child processes that contain tested server implementation controlled by the scenario code. \nTested client implementation is bound to server's child process using mechanism described below.\n\nEvery scenario is composed of three phases: setup, step and teardown.\nAll these phases have corresponding code on server side.\nSetup phase is mandatory and is used to initialize server implementation and put it into desired state.\nIt can be used for example to set up mocks.\nStep phases are optional and the scenario can define any number of them.\nThese steps are useful in situations in which server side behavior must be altered during test.\nThey can be also used for intermediate assertions before the test ends.\nTeardown phase is optional and should be used to close all server connections and deallocate any resources used during the test.\nThis phase can be used for assertions too.\nThe execution of this phase leads to the termination of child process containing the tested server implementation.\n\nEven though server side assertions are a powerful thing, they shouldn't be overused because debugging of the integration test could be tedious.\nAs little server side code as possible should be tested under integration.\nSmaller tests are easier to maintain and debug.\n\n## Client Interface\n\nThe Vindaloo client is a JavaScript library which controls integration tests.\nIts API docs are available in `docs` directory.\n\n## Server Interface\n\nThe Vindaloo server is standalone CLI application.\nIt includes web server exposing API which allows the management of server side tests.\nIt scans configured directories for scenario definitions on its startup.\nThese scenarios can be used by client implementation to perform integration tests.\nScenario definitions are ordinary Node.js modules with the following six globals.\n\n### `scenario(scenarioName: string, scenarioDefinition: () => void) => void`\n\nThis function defines scenario and its name.\nScenario function should only be used in the root of the module.\nMultiple scenarios can be defined within one module.\nScenario definition should be synchronous and shouldn't cause any side effects like opening external connections.\n\n### `setup(setupDefinition: () => void | Promise<void>) => void`\n\nThis function defines setup phase of a scenario.\nSetup function should only be used within the scenario definition.\nEvery scenario must contain exactly one setup definition.\nSetup definition can be asynchronous. In that case, promise should be returned.\n\n### `step(stepDefinition: () => void | Promise<void>) => void`\n\nThis function defines step phase of a scenario.\nStep function should only be used within the scenario definition.\nEvery scenario can contain zero or more step definitions.\nStep definition can be asynchronous. In that case, promise should be returned.\n\n### `teardown(stepDefinition: () => void | Promise<void>) => void`\n\nThis function defines teardown phase of a scenario.\nTeardown function should only be used within the scenario definition.\nEvery scenario can contain zero or one teardown definitions.\nStep definition can be asynchronous. In this case, promise should be returned.\n\n### `expect`\n\nThis object is used for assertions during a test.\nIt gives you access to a number of matchers that let you validate all kinds of values.\nIt's provided by the Jest framework, for more information see [expect documentation](https://facebook.github.io/jest/docs/en/expect.html).\n\n### `jest`\n\nMethods in this object help you create mocks.\nIt's provided by the Jest framework, for more information see it's [jest documentation](https://facebook.github.io/jest/docs/en/jest-object.html). \n\n## Binding\n\nVindaloo provides two ways of binding client and server implementation during a test.\nThe first, preferred way, is an allocation of unique port for each test.\nRequests and responses between client and server are isolated using this port.\n\nThe second, alternative way, is the use of a unique value in special header.\nIn this type of binding the Vindaloo's server and the tested server implementation share the same port.\nVindaloo's server routes requests to corresponding server implementation using the value in its binding header.\n\nIn order to establish connection between client and server, patched implementations of Node's `http.Server` and `https.Server` are injected into the server's test environment.\nThis patch alters behavior of `listen` method so it won't listen on given port and host but will receive connections from bound client based on chosen binding type.\n\nOn client side it's necessary to pass allocated port or header value to implementation under test.\nYou can supply callback function to client's `setupBinding` parameter for this purpose.\nThis function gets called every time setup `phase` is invoked and receives binding port or name and value of binding header.  \nThe function can for example update global configuration according to received values.\n\n## Configuration\n\nClient is configured via constructor. All parameters are optional.\n\n| Parameter | Type | Default value | Description |\n|-|-|-|-|\n| `host` | string | `'127.0.0.1'` | The host of the server. |\n| `port` | number | `3000` | The port where the server is run on. |\n| `endpointsPrefix` | string | `'/vindaloo'` | Prefix of control endpoints exposed by Vindaloo. |\n| `bindingType` | string | `'port'` | Chosen type of binding. |\n| `setupBinding` | function | *empty* | Function used for binding setup in client implementation before each test. |\n\nServer is configured using `vindaloo` section in project's `package.json` file. All parameters as optional.\n\n| Parameter | Type | Default value | Description |\n|-|-|-|-|\n| `host` | string | `'127.0.0.1'` | The host to run the server. |\n| `port` | number | `3000` | The port to run the server. |\n| `endpointsPrefix` | string | `'/vindaloo'` | Prefix of control endpoints exposed by server. |\n| `scenarioDirectories` | string[] | `['tests']` | Array of directories where the server should look for scenario definitions. |\n| `scenarioRegex` | string | `.*(\\.|/)scenario\\.js$` | Regular expression of file names where scenarios are defined. |\n| `logDirectory` | string | `'logs/vindaloo'` | Directory where server logs are stored. |\n| `allowedBindingTypes` | string[] | `['port', 'header']` | Array of binding types allowed to use by client. | \n| `bindingHeaderName` | string | `'X-Test-Id'` | Header name used for header type binding. |\n| `testConcurrencyLimit` | number | `8` | Maximum number of concurrently running tests. |\n| `testDurationTimeout` | number | `60` | Maximum duration of one test in seconds. |\n\n## Logging\n\nStandard and standard error outputs of each server side test run are stored in log file.\nThese files are located inside the directory specified in the configuration.\nEach file name consists of date, time and a test identifier in the following form:\n\n```\n2018-05-20_10-19-41_f907401e-f6fa-42ce-9e12-aa0b4e6bd5d5.log\n```\n\nGeneral information about currently running tests including debug information are available on the standard output of Vindaloo server.\n\n## Examples\n\nTo run examples, install Vindaloo's dependencies and build it from sources:\n\n```bash\nyarn && yarn build\n``` \n\nThen start Vindaloo server in `examples/server` directory:\n\n```bash\nyarn vindaloo\n```\n\nWhile the server is running, execute client's tests within `examples/client` directory:\n\n```bash\nyarn test\n```\n\nYou should see two passed client tests and debug information on Vindaloo server's standard output.\n\n## License\n\nVindaloo is available under [MIT license](./license).\n",
+    "longname": "/Users/tomas/skola/integration/README.md",
+    "name": "./README.md",
+    "static": true,
+    "access": "public"
+  },
+  {
+    "kind": "packageJSON",
+    "content": "{\n  \"name\": \"Vindaloo\",\n  \"description\": \"Painless integragration testing.\",\n  \"version\": \"0.1.0\",\n  \"main\": \"build/vindaloo.js\",\n  \"bin\": \"bin/jest.js\",\n  \"engines\": {\n    \"node\": \">= 8\"\n  },\n  \"repository\": {\n    \"type\": \"git\",\n    \"url\": \"https://github.com/markatom/vindaloo\"\n  },\n  \"license\": \"MIT\",\n  \"keywords\": [\n    \"test\",\n    \"testing\",\n    \"integration\",\n    \"client\",\n    \"server\",\n    \"producer\",\n    \"consumer\",\n    \"painless\",\n    \"expect\",\n    \"jest\",\n    \"mock\"\n  ],\n  \"scripts\": {\n    \"build\": \"scripts/build\",\n    \"check-all\": \"scripts/check-all\",\n    \"flow\": \"scripts/flow\",\n    \"generate-docs\": \"scripts/generate-docs\",\n    \"jest\": \"scripts/jest\",\n    \"lint\": \"scripts/lint\",\n    \"watch\": \"scripts/watch\"\n  },\n  \"dependencies\": {\n    \"expect\": \"^22.4.3\",\n    \"find-root\": \"^1.1.0\",\n    \"jest-environment-node\": \"^22.4.3\",\n    \"jest-resolve\": \"^22.4.3\",\n    \"jest-runtime\": \"^22.4.4\",\n    \"koa\": \"^2.5.1\",\n    \"koa-bodyparser\": \"^4.2.1\",\n    \"koa-route\": \"^3.2.0\",\n    \"popsicle\": \"^10.0.1\",\n    \"uuid\": \"^3.2.1\"\n  },\n  \"devDependencies\": {\n    \"@cookielab.io/eslint-config-server\": \"^0.0.6\",\n    \"@cookielab.io/eslint-plugin-custom-rules\": \"^0.0.2\",\n    \"babel-cli\": \"^6.26.0\",\n    \"babel-core\": \"^6.26.3\",\n    \"babel-eslint\": \"^8.2.3\",\n    \"babel-jest\": \"^22.4.4\",\n    \"babel-plugin-transform-flow-strip-types\": \"^6.22.0\",\n    \"babel-preset-node8\": \"^1.2.0\",\n    \"esdoc\": \"^1.1.0\",\n    \"esdoc-ecmascript-proposal-plugin\": \"^1.0.0\",\n    \"esdoc-flow-type-plugin\": \"^1.1.0\",\n    \"esdoc-standard-plugin\": \"^1.0.0\",\n    \"eslint\": \"^4.19.1\",\n    \"eslint-plugin-filenames\": \"^1.2.0\",\n    \"eslint-plugin-flowtype\": \"^2.47.1\",\n    \"eslint-plugin-import\": \"^2.12.0\",\n    \"flow-bin\": \"^0.72.0\",\n    \"flow-copy-source\": \"^1.3.0\",\n    \"flow-typed\": \"^2.4.0\",\n    \"jest\": \"^22.4.4\"\n  },\n  \"jest\": {\n    \"roots\": [\n      \"<rootDir>/src\",\n      \"<rootDir>/tests\"\n    ],\n    \"testEnvironment\": \"node\",\n    \"collectCoverageFrom\": [\n      \"src/**/*.js\"\n    ]\n  }\n}\n",
+    "longname": "/Users/tomas/skola/integration/package.json",
+    "name": "package.json",
+    "static": true,
+    "access": "public"
+  }
+]

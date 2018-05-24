@@ -1,0 +1,19 @@
+{
+  "engines": {
+    "node": ">= 8"
+  },
+  "scripts": {
+    "test": "../../node_modules/.bin/jest"
+  },
+  "jest": {
+    "roots": [
+      "<rootDir>/tests"
+    ],
+    "setupFiles": [
+      "<rootDir>/tests/setup.js"
+    ]
+  },
+  "devDependencies": {
+    "node-fetch": "^2.1.2"
+  }
+}

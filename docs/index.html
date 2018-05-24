@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <base data-ice="baseUrl">
+  <title data-ice="title">Home | Vindaloo</title>
+  <link type="text/css" rel="stylesheet" href="css/style.css">
+  <link type="text/css" rel="stylesheet" href="css/prettify-tomorrow.css">
+  <script src="script/prettify/prettify.js"></script>
+  <script src="script/manual.js"></script>
+<meta name="description" content="Painless integragration testing."><meta property="twitter:card" content="summary"><meta property="twitter:title" content="Vindaloo"><meta property="twitter:description" content="Painless integragration testing."></head>
+<body class="layout-container" data-ice="rootContainer">
+
+<header>
+  <a href="./">Home</a>
+  
+  <a href="identifiers.html">Reference</a>
+  <a href="source.html">Source</a>
+  
+  <div class="search-box">
+  <span>
+    <img src="./image/search.png">
+    <span class="search-input-edge"></span><input class="search-input"><span class="search-input-edge"></span>
+  </span>
+    <ul class="search-result"></ul>
+  </div>
+<a style="position:relative; top:3px;" href="https://github.com/markatom/vindaloo"><img width="20px" src="./image/github.png"></a></header>
+
+<nav class="navigation" data-ice="nav"><div>
+  <ul>
+    
+  <li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/client/Client.js~Client.html">Client</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/client/Test.js~Test.html">Test</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/client/Test.js~TestError.html">TestError</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-typedef">T</span><span data-ice="name"><span><a href="typedef/index.html#static-typedef-Configuration">Configuration</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-typedef">T</span><span data-ice="name"><span><a href="typedef/index.html#static-typedef-Binding">Binding</a></span></span></li>
+</ul>
+</div>
+</nav>
+
+<div class="content" data-ice="content"><div data-ice="index" class="github-markdown"><h1 id="vindaloo">Vindaloo</h1><ul>
+<li>Painless integration testing of your client-server applications.</li>
+<li>Test both client and server implementation together in direct communication.</li>
+<li>Organize your integration tests in form of scenarios.</li>
+</ul>
+<h2 id="getting-started">Getting Started</h2><p>Install Vindaloo using <code>yarn</code>:</p>
+<pre><code class="lang-bash"><code class="source-code prettyprint">yarn add --dev vindaloo</code>
+</code></pre>
+<p>Or npm, if you wish:</p>
+<pre><code class="lang-bash"><code class="source-code prettyprint">npm install --save-dev vindaloo</code>
+</code></pre>
+<p>Please note that the minimum supported Node version is <code>8.0.0</code>.</p>
+<p>Let&apos;s say you have client implementation <code>authenticator.js</code> allowing users to log in:</p>
+<pre><code class="lang-javascript"><code class="source-code prettyprint">import configuration from &apos;./configuration&apos;;
+
+const login = async (email, password) =&gt; {
+    const response = await fetch(`http://${configuration.api.host}:${configuration.api.port}/login`, {
+        method: &apos;POST&apos;,
+        headers: Object.assign({&apos;Content-Type&apos;: &apos;application/json&apos;}, configuration.api.extraHeaders),
+        body: JSON.stringify({email, password}),
+    });
+
+    if (response.status === 401) { // unauthorized
+        throw new Error(&apos;Invalid email or password.&apos;);
+    }
+
+    return await response.json();
+};
+
+export {
+    login,
+};</code>
+</code></pre>
+<p>And corresponding server implementation using Koa.js framework set up in <code>app.js</code>:</p>
+<pre><code class="lang-javascript"><code class="source-code prettyprint">const authenticator = require(&apos;./authenticator&apos;);
+const bodyParser = require(&apos;koa-bodyparser&apos;);
+const Koa = require(&apos;koa&apos;);
+const route = require(&apos;koa-route&apos;);
+
+const start = () =&gt; {
+    const app = new Koa();
+
+    app.use(bodyParser());
+    app.use(route.post(&apos;/login&apos;, (ctx) =&gt; {
+        try {
+            ctx.response.body = authenticator.login(ctx.request.body.email, ctx.request.body.password);
+
+        } catch (error) {
+            ctx.response.status = 401; // unauthorized
+        }
+    }));
+
+    app.listen(12345);
+};
+
+module.exports = {
+    start,
+};</code>
+</code></pre>
+<p>Ignore the actual authenticator implementation on server side for now.
+We want to test client-server integration.
+How would we do that? Let&apos;s use Vindaloo, it&apos;s super easy!</p>
+<p>We want to test two scenarios &#x2013; when the user successfully logs in and when the user supplies invalid credentials.
+Let&apos;s write those scenarios down on server side:</p>
+<pre><code class="lang-javascript"><code class="source-code prettyprint">const app = require(&apos;../../src/server/app&apos;);
+const authenticator = require(&apos;../../src/server/authenticator&apos;);
+
+scenario(&apos;login:successful&apos;, () =&gt; {
+    setup(() =&gt; {
+        jest.spyOn(authenticator, &apos;login&apos;).mockImplementation(() =&gt; ({
+            id: 42,
+            name: &apos;Tom&#xE1;&#x161; Markacz&apos;,
+        }));
+
+        app.start();
+    });
+
+    teardown(() =&gt; {
+        jest.restoreAllMocks();
+    });
+});
+
+scenario(&apos;login:failed&apos;, () =&gt; {
+    setup(() =&gt; {
+        jest.spyOn(authenticator, &apos;login&apos;).mockImplementation(() =&gt; {
+            throw new Error(&apos;Invalid password.&apos;);
+        });
+
+        app.start();
+    });
+
+    teardown(() =&gt; {
+        jest.restoreAllMocks();
+    });
+});</code>
+</code></pre>
+<p>Note that this code is using global <code>jest</code>. If you don&apos;t know <a href="https://facebook.github.io/jest/">Jest</a>, take a look, it&apos;s a great testing framework.
+Vindaloo uses some components from Jest so if you&apos;re familiar with it, you already know how to assert and mock using Vindaloo.
+Here, we&apos;re using Jest to mock implementation of <code>login</code> function from <code>authenticator</code> module.
+It&apos;s implementation is replaced in these scenarios because we don&apos;t want to include it in integration tests.
+It&apos;s better to write some unit tests to test its implementation separately.
+The key thing here is <code>app.start()</code> which starts Koa application and listens for incoming requests.
+Now, to be able to execute defined scenarios, run the following:</p>
+<pre><code class="lang-bash"><code class="source-code prettyprint">yarn vindaloo</code>
+</code></pre>
+<p>This will start server listening on port 3000 allowing you to run the previous scenarios and test against them.</p>
+<p>Let&apos;s write login tests on client side using Jest framework:</p>
+<pre><code class="lang-javascript"><code class="source-code prettyprint">import * as authenticator from &apos;../../src/client/authenticator&apos;;
+import Client from &apos;../../../src/client/Client&apos;;
+import configuration from &apos;../../src/client/configuration&apos;;
+
+const client = new Client({
+    bindingType: &apos;header&apos;,
+    setupBinding: (headerName, headerValue) =&gt; {
+        configuration.api.extraHeaders[headerName] = headerValue;
+    },
+});
+
+describe(&apos;successful user authentication&apos;, () =&gt; {
+    const test = client.createTest(&apos;login:successful&apos;);
+
+    beforeAll(() =&gt; test.setup());
+    it(&apos;returns authenticated user&apos;, async () =&gt; {
+        const user = await authenticator.login(&apos;tomas@markacz.com&apos;, &apos;foobar&apos;);
+
+        expect(user).toEqual({
+            id: 42,
+            name: &apos;Tom&#xE1;&#x161; Markacz&apos;,
+        });
+    });
+    afterAll(() =&gt; test.teardown());
+});
+
+describe(&apos;failed user authentication&apos;, () =&gt; {
+    const test = client.createTest(&apos;login:failed&apos;);
+
+    beforeAll(() =&gt; test.setup());
+    it(&apos;throws an error&apos;, async () =&gt; {
+        const promise = authenticator.login(&apos;tomas@markacz.com&apos;, &apos;foobar&apos;);
+
+        await expect(promise).rejects.toEqual(new Error(&apos;Invalid email or password.&apos;));
+    });
+    afterAll(() =&gt; test.teardown());
+});</code>
+</code></pre>
+<p>This code will run two tests, each using previously written scenarios on your server, and test client implementation against them!
+This way you can write integration tests as easily as unit tests. Isn&apos;t that great?</p>
+<h2 id="how-it-works">How It Works</h2><p>Vindaloo consists of two parts &#x2013; client and server. These parts use unified HTTP API to communicate with each other.
+Currently, there is only JavaScript implementation of Vindaloo but the goal is to port this implementation to other programming languages as well.</p>
+<p>Integration test is always initialized by client.
+Server offers predefined set of integration scenarios, which can be executed by the client.
+Vindaloo&apos;s server is responsible for spawning and managing child processes that contain tested server implementation controlled by the scenario code. 
+Tested client implementation is bound to server&apos;s child process using mechanism described below.</p>
+<p>Every scenario is composed of three phases: setup, step and teardown.
+All these phases have corresponding code on server side.
+Setup phase is mandatory and is used to initialize server implementation and put it into desired state.
+It can be used for example to set up mocks.
+Step phases are optional and the scenario can define any number of them.
+These steps are useful in situations in which server side behavior must be altered during test.
+They can be also used for intermediate assertions before the test ends.
+Teardown phase is optional and should be used to close all server connections and deallocate any resources used during the test.
+This phase can be used for assertions too.
+The execution of this phase leads to the termination of child process containing the tested server implementation.</p>
+<p>Even though server side assertions are a powerful thing, they shouldn&apos;t be overused because debugging of the integration test could be tedious.
+As little server side code as possible should be tested under integration.
+Smaller tests are easier to maintain and debug.</p>
+<h2 id="client-interface">Client Interface</h2><p>The Vindaloo client is a JavaScript library which controls integration tests.
+Its API docs are available in <code>docs</code> directory.</p>
+<h2 id="server-interface">Server Interface</h2><p>The Vindaloo server is standalone CLI application.
+It includes web server exposing API which allows the management of server side tests.
+It scans configured directories for scenario definitions on its startup.
+These scenarios can be used by client implementation to perform integration tests.
+Scenario definitions are ordinary Node.js modules with the following six globals.</p>
+<h3 id="-code-scenario-scenarioname--string--scenariodefinition-------gt--void----gt--void--code-"><code>scenario(scenarioName: string, scenarioDefinition: () =&gt; void) =&gt; void</code></h3><p>This function defines scenario and its name.
+Scenario function should only be used in the root of the module.
+Multiple scenarios can be defined within one module.
+Scenario definition should be synchronous and shouldn&apos;t cause any side effects like opening external connections.</p>
+<h3 id="-code-setup-setupdefinition-------gt--void---promise-lt-void-gt-----gt--void--code-"><code>setup(setupDefinition: () =&gt; void | Promise&lt;void&gt;) =&gt; void</code></h3><p>This function defines setup phase of a scenario.
+Setup function should only be used within the scenario definition.
+Every scenario must contain exactly one setup definition.
+Setup definition can be asynchronous. In that case, promise should be returned.</p>
+<h3 id="-code-step-stepdefinition-------gt--void---promise-lt-void-gt-----gt--void--code-"><code>step(stepDefinition: () =&gt; void | Promise&lt;void&gt;) =&gt; void</code></h3><p>This function defines step phase of a scenario.
+Step function should only be used within the scenario definition.
+Every scenario can contain zero or more step definitions.
+Step definition can be asynchronous. In that case, promise should be returned.</p>
+<h3 id="-code-teardown-stepdefinition-------gt--void---promise-lt-void-gt-----gt--void--code-"><code>teardown(stepDefinition: () =&gt; void | Promise&lt;void&gt;) =&gt; void</code></h3><p>This function defines teardown phase of a scenario.
+Teardown function should only be used within the scenario definition.
+Every scenario can contain zero or one teardown definitions.
+Step definition can be asynchronous. In this case, promise should be returned.</p>
+<h3 id="-code-expect--code-"><code>expect</code></h3><p>This object is used for assertions during a test.
+It gives you access to a number of matchers that let you validate all kinds of values.
+It&apos;s provided by the Jest framework, for more information see <a href="https://facebook.github.io/jest/docs/en/expect.html">expect documentation</a>.</p>
+<h3 id="-code-jest--code-"><code>jest</code></h3><p>Methods in this object help you create mocks.
+It&apos;s provided by the Jest framework, for more information see it&apos;s <a href="https://facebook.github.io/jest/docs/en/jest-object.html">jest documentation</a>. </p>
+<h2 id="binding">Binding</h2><p>Vindaloo provides two ways of binding client and server implementation during a test.
+The first, preferred way, is an allocation of unique port for each test.
+Requests and responses between client and server are isolated using this port.</p>
+<p>The second, alternative way, is the use of a unique value in special header.
+In this type of binding the Vindaloo&apos;s server and the tested server implementation share the same port.
+Vindaloo&apos;s server routes requests to corresponding server implementation using the value in its binding header.</p>
+<p>In order to establish connection between client and server, patched implementations of Node&apos;s <code>http.Server</code> and <code>https.Server</code> are injected into the server&apos;s test environment.
+This patch alters behavior of <code>listen</code> method so it won&apos;t listen on given port and host but will receive connections from bound client based on chosen binding type.</p>
+<p>On client side it&apos;s necessary to pass allocated port or header value to implementation under test.
+You can supply callback function to client&apos;s <code>setupBinding</code> parameter for this purpose.
+This function gets called every time setup <code>phase</code> is invoked and receives binding port or name and value of binding header.<br>The function can for example update global configuration according to received values.</p>
+<h2 id="configuration">Configuration</h2><p>Client is configured via constructor. All parameters are optional.</p>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Default value</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>host</code></td>
+<td>string</td>
+<td><code>&apos;127.0.0.1&apos;</code></td>
+<td>The host of the server.</td>
+</tr>
+<tr>
+<td><code>port</code></td>
+<td>number</td>
+<td><code>3000</code></td>
+<td>The port where the server is run on.</td>
+</tr>
+<tr>
+<td><code>endpointsPrefix</code></td>
+<td>string</td>
+<td><code>&apos;/vindaloo&apos;</code></td>
+<td>Prefix of control endpoints exposed by Vindaloo.</td>
+</tr>
+<tr>
+<td><code>bindingType</code></td>
+<td>string</td>
+<td><code>&apos;port&apos;</code></td>
+<td>Chosen type of binding.</td>
+</tr>
+<tr>
+<td><code>setupBinding</code></td>
+<td>function</td>
+<td><em>empty</em></td>
+<td>Function used for binding setup in client implementation before each test.</td>
+</tr>
+</tbody>
+</table>
+<p>Server is configured using <code>vindaloo</code> section in project&apos;s <code>package.json</code> file. All parameters as optional.</p>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Default value</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>host</code></td>
+<td>string</td>
+<td><code>&apos;127.0.0.1&apos;</code></td>
+<td>The host to run the server.</td>
+</tr>
+<tr>
+<td><code>port</code></td>
+<td>number</td>
+<td><code>3000</code></td>
+<td>The port to run the server.</td>
+</tr>
+<tr>
+<td><code>endpointsPrefix</code></td>
+<td>string</td>
+<td><code>&apos;/vindaloo&apos;</code></td>
+<td>Prefix of control endpoints exposed by server.</td>
+</tr>
+<tr>
+<td><code>scenarioDirectories</code></td>
+<td>string[]</td>
+<td><code>[&apos;tests&apos;]</code></td>
+<td>Array of directories where the server should look for scenario definitions.</td>
+</tr>
+<tr>
+<td><code>scenarioRegex</code></td>
+<td>string</td>
+<td>`.*(.</td>
+<td>/)scenario.js$`</td>
+<td>Regular expression of file names where scenarios are defined.</td>
+</tr>
+<tr>
+<td><code>logDirectory</code></td>
+<td>string</td>
+<td><code>&apos;logs/vindaloo&apos;</code></td>
+<td>Directory where server logs are stored.</td>
+</tr>
+<tr>
+<td><code>allowedBindingTypes</code></td>
+<td>string[]</td>
+<td><code>[&apos;port&apos;, &apos;header&apos;]</code></td>
+<td>Array of binding types allowed to use by client.</td>
+</tr>
+<tr>
+<td><code>bindingHeaderName</code></td>
+<td>string</td>
+<td><code>&apos;X-Test-Id&apos;</code></td>
+<td>Header name used for header type binding.</td>
+</tr>
+<tr>
+<td><code>testConcurrencyLimit</code></td>
+<td>number</td>
+<td><code>8</code></td>
+<td>Maximum number of concurrently running tests.</td>
+</tr>
+<tr>
+<td><code>testDurationTimeout</code></td>
+<td>number</td>
+<td><code>60</code></td>
+<td>Maximum duration of one test in seconds.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="logging">Logging</h2><p>Standard and standard error outputs of each server side test run are stored in log file.
+These files are located inside the directory specified in the configuration.
+Each file name consists of date, time and a test identifier in the following form:</p>
+<pre><code><code class="source-code prettyprint">2018-05-20_10-19-41_f907401e-f6fa-42ce-9e12-aa0b4e6bd5d5.log</code>
+</code></pre><p>General information about currently running tests including debug information are available on the standard output of Vindaloo server.</p>
+<h2 id="examples">Examples</h2><p>To run examples, install Vindaloo&apos;s dependencies and build it from sources:</p>
+<pre><code class="lang-bash"><code class="source-code prettyprint">yarn &amp;&amp; yarn build</code>
+</code></pre>
+<p>Then start Vindaloo server in <code>examples/server</code> directory:</p>
+<pre><code class="lang-bash"><code class="source-code prettyprint">yarn vindaloo</code>
+</code></pre>
+<p>While the server is running, execute client&apos;s tests within <code>examples/client</code> directory:</p>
+<pre><code class="lang-bash"><code class="source-code prettyprint">yarn test</code>
+</code></pre>
+<p>You should see two passed client tests and debug information on Vindaloo server&apos;s standard output.</p>
+<h2 id="license">License</h2><p>Vindaloo is available under <a href="./license">MIT license</a>.</p>
+</div>
+</div>
+
+<footer class="footer">
+  Generated by <a href="https://esdoc.org">ESDoc<span data-ice="esdocVersion">(1.1.0)</span><img src="./image/esdoc-logo-mini-black.png"></a>
+</footer>
+
+<script src="script/search_index.js"></script>
+<script src="script/search.js"></script>
+<script src="script/pretty-print.js"></script>
+<script src="script/inherited-summary.js"></script>
+<script src="script/test-summary.js"></script>
+<script src="script/inner-link.js"></script>
+<script src="script/patch-for-local.js"></script>
+</body>
+</html>

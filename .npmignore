@@ -1,0 +1,12 @@
+/.idea/
+/docs/
+/examples/
+/flow-typed/
+/scripts/
+/src/
+/tests/
+.babelrc
+.esdoc.json
+.eslintrc.json
+.flowconfig
+yarn.lock
