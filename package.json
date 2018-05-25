@@ -1,7 +1,7 @@
 {
   "name": "vindaloo",
   "description": "Painless integragration testing.",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "main": "build/vindaloo.js",
   "bin": {
     "vindaloo": "bin/vindaloo"
